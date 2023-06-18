@@ -1,0 +1,30 @@
+pluginManagement {
+    plugins {
+        id 'io.freefair.lombok' version '8.0.1'
+        id 'com.github.ben-manes.versions' version '0.46.0'
+        id 'nl.littlerobots.version-catalog-update' version '0.8.0'
+        id 'org.springframework.boot' version '3.1.0'
+        id 'io.spring.dependency-management' version '1.1.0'
+    }
+}
+
+plugins {
+    id 'org.gradle.toolchains.foojay-resolver-convention' version '0.5.0'
+}
+
+dependencyResolutionManagement {
+    versionCatalogs {
+        common {
+            version('junit', '5.9.1')
+        }
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+rootProject.name = 'ddon-web-server'
